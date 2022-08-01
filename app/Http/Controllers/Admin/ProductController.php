@@ -42,7 +42,6 @@ class ProductController extends Controller
             'deskripsi'=>'required',
             'stok'=>'required',
             'harga'=>'required',
-            'gambar'  => 'required|image|mimes:png,jpg,jpeg',            
         ]);
         $image = $request->file('gambar');
         $image->storeAs('public/PhotoProduct/', $image->hashName());
